@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Criadero de Shih Tzu con crianza ética y responsable. Cachorros con pedigrí, salud certificada y mucho amor. Conoce nuestra familia y adopta tu compañero ideal." />
+  <title>IsabellaRoyal Shih Tzu — Criadero Ético y Responsable</title>
+
+  <!-- Google Fonts: Fraunces (display serif) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 (iconos WhatsApp, Instagram, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="styles.css?v=20260626" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="navbar__inner">
+
+      <a href="#inicio" class="navbar__logo" aria-label="IsabellaRoyal Shih Tzu — Inicio">
+        <img
+          src="assets/img/logo_navbar.png"
+          alt="Logo Isabella Royal Criadero de Shih Tzu"
+          class="navbar__logo-img"
+          width="72"
+          height="72"
+        />
+      </a>
+
+      <!-- Botón hamburguesa (móvil) -->
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <!-- Menú principal -->
+      <nav class="navbar__menu" id="navMenu" role="navigation" aria-label="Menú principal">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="#inicio">Inicio</a></li>
+          <li><a class="navbar__link" href="#nosotros">Quiénes Somos</a></li>
+          <li><a class="navbar__link" href="#ejemplares">Ejemplares</a></li>
+          <li><a class="navbar__link" href="#cachorros">Cachorros</a></li>
+          <li><a class="navbar__link" href="#cuidados">Cuidados</a></li>
+          <li><a class="navbar__link navbar__link--cta" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         SECCIÓN 1: INICIO / HERO
+    ============================================================ -->
+    <section class="hero" id="inicio" aria-label="Sección principal">
+
+      <!-- FOTO: Imagen de fondo del hero. Recomendado: foto horizontal amplia de un Shih Tzu
+           adorable en un ambiente cálido (jardín, sillón, estudio luminoso).
+           Tamaño ideal: 1920×1080 px o superior. -->
+      <div class="hero__bg">
+        <img
+          src="assets/img/hero.jpg"
+          alt="Adorable cachorro Shih Tzu mirando a cámara"
+          class="hero__bg-img"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <!-- Reemplazar src con tu foto real: <img src="assets/img/hero-principal.jpg" ... /> -->
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__grain" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content container">
+        <p class="hero__kicker">✦ Crianza Ética · Amor por la Raza · Desde 2015 ✦</p>
+        <h1 class="hero__title">
+          Pequeños corazones<br>
+          <em>que cambian tu vida</em>.
+        </h1>
+        <p class="hero__sub">
+          Shih Tzu criados con amor, salud certificada y el temperamento más dulce.<br>
+          Bienvenido a nuestra familia peluda.
+        </p>
+        <div class="hero__actions">
+          <a href="#cachorros" class="btn btn--gold">
+            Ver cachorros disponibles
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#nosotros" class="btn btn--ghost">Conocer el criadero</a>
+        </div>
+        <div class="hero__badges" aria-label="Certificaciones del criadero">
+          <span class="badge"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Crianza ética</span>
+          <span class="badge"><i class="fa-solid fa-syringe" aria-hidden="true"></i> Vacunas al día</span>
+          <span class="badge"><i class="fa-solid fa-certificate" aria-hidden="true"></i> Pedigrí garantizado</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 2: QUIÉNES SOMOS
+    ============================================================ -->
+    <section class="about" id="nosotros" aria-label="Quiénes somos">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Nuestra historia</span>
+          <h2 class="section-title">Más que un criadero,<br><em>una familia</em></h2>
+        </div>
+
+        <div class="about__grid">
+
+          <!-- Columna de imágenes -->
+          <div class="about__images">
+            <!-- FOTO: Foto de los dueños del criadero con sus Shih Tzu. Formato cuadrado o 4:5.
+                 Tamaño recomendado: 600×750 px. -->
+            <div class="about__img-main">
+              <img
+                src="assets/img/about-family.jpg"
+                alt="Familia del criadero IsabellaRoyal con sus Shih Tzu"
+                loading="lazy"
+                width="600"
+                height="750"
+              />
+              <!-- Reemplazar: <img src="assets/img/familia-criadero.jpg" ... /> -->
+            </div>
+            <!-- FOTO: Imagen secundaria — cachorro recién nacido o detalle del criadero.
+                 Tamaño recomendado: 300×300 px. -->
+            <div class="about__img-float">
+              <img
+                src="assets/img/about-float.jpg"
+                alt="Cachorro Shih Tzu recién nacido"
+                loading="lazy"
+                width="300"
+                height="300"
+              />
+              <!-- Reemplazar: <img src="assets/img/cachorro-recien-nacido.jpg" ... /> -->
+            </div>
+          </div>
+
+          <!-- Columna de texto -->
+          <div class="about__text">
+            <p class="about__lead">
+              Todo comenzó con <strong>Isabella</strong>, nuestra primera Shih Tzu, que llegó a nuestra familia en 2015 y nos robó el corazón para siempre.
+            </p>
+            <p>
+              Desde entonces, hemos dedicado nuestra vida a comprender, amar y reproducir de forma <strong>responsable y ética</strong> esta raza extraordinaria. Cada camada es planificada con meses de anticipación, priorizando siempre la <strong>salud genética, el temperamento y el bienestar</strong> de nuestros perritos.
+            </p>
+            <p>
+              No somos una fábrica de cachorros. Somos una familia apasionada que cría en casa, con amor, estímulos tempranos y toda la socialización que un cachorro necesita para convertirse en el compañero perfecto.
+            </p>
+
+            <div class="about__stats">
+              <div class="about__stat">
+                <span class="about__stat-num">+50</span>
+                <span class="about__stat-label">Cachorros en hogares felices</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-num">10</span>
+                <span class="about__stat-label">Años de experiencia</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-num">100%</span>
+                <span class="about__stat-label">Compromiso ético</span>
+              </div>
+            </div>
+
+            <div class="about__values">
+              <div class="value-card">
+                <i class="fa-solid fa-heart value-card__icon" aria-hidden="true"></i>
+                <h3 class="value-card__title">Crianza en hogar</h3>
+                <p class="value-card__text">Nuestros cachorros crecen en un ambiente doméstico lleno de amor, sonidos y experiencias positivas.</p>
+              </div>
+              <div class="value-card">
+                <i class="fa-solid fa-stethoscope value-card__icon" aria-hidden="true"></i>
+                <h3 class="value-card__title">Salud garantizada</h3>
+                <p class="value-card__text">Controles veterinarios completos, esquema de vacunación y desparasitación antes de la entrega.</p>
+              </div>
+              <div class="value-card">
+                <i class="fa-solid fa-handshake value-card__icon" aria-hidden="true"></i>
+                <h3 class="value-card__title">Apoyo post-entrega</h3>
+                <p class="value-card__text">Te acompañamos siempre. Asesoría permanente en cuidado, alimentación y crianza.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 3: NUESTROS EJEMPLARES
+    ============================================================ -->
+    <section class="ejemplares" id="ejemplares" aria-label="Nuestros ejemplares">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Los reyes del criadero</span>
+          <h2 class="section-title">Nuestros <em>Ejemplares</em></h2>
+          <p class="section-desc">Conoce a los padres de nuestras camadas. Cada uno seleccionado con rigor por su salud, temperamento y estándar de raza.</p>
+        </div>
+
+        <div class="ejemplares__grid">
+
+          <!-- ── Ejemplar 1 ── -->
+          <article class="ejemplar-card">
+            <!-- FOTO: Retrato del ejemplar macho (frente o 3/4). Fondo neutro o exterior.
+                 Tamaño recomendado: 500×600 px. -->
+            <div class="ejemplar-card__img-wrap">
+              <img
+                src="assets/img/ejemplar-1.jpg"
+                alt="Ejemplar macho Shih Tzu Max Royal"
+                loading="lazy"
+                width="500"
+                height="600"
+              />
+              <!-- Reemplazar: <img src="assets/img/ejemplar-max-royal.jpg" ... /> -->
+              <span class="ejemplar-card__badge ejemplar-card__badge--male">
+                <i class="fa-solid fa-mars" aria-hidden="true"></i> Macho
+              </span>
+            </div>
+            <div class="ejemplar-card__body">
+              <h3 class="ejemplar-card__name">Max Royal</h3>
+              <p class="ejemplar-card__subtitle">Campeón de belleza · Línea importada</p>
+              <dl class="ejemplar-card__specs">
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-dna" aria-hidden="true"></i> Pedigrí</dt>
+                  <dd>FCI registrado · 3 generaciones</dd>
+                </div>
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-weight-scale" aria-hidden="true"></i> Peso</dt>
+                  <dd>5,2 kg · Talla estándar</dd>
+                </div>
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-face-smile" aria-hidden="true"></i> Temperamento</dt>
+                  <dd>Dócil, juguetón, sociable</dd>
+                </div>
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Salud</dt>
+                  <dd>Libre de enfermedades hereditarias</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- ── Ejemplar 2 ── -->
+          <article class="ejemplar-card">
+            <!-- FOTO: Retrato de la ejemplar hembra (frente o 3/4). Fondo neutro o exterior.
+                 Tamaño recomendado: 500×600 px. -->
+            <div class="ejemplar-card__img-wrap">
+              <img
+                src="assets/img/ejemplar-2.jpg"
+                alt="Ejemplar hembra Shih Tzu Bella Isabella"
+                loading="lazy"
+                width="500"
+                height="600"
+              />
+              <!-- Reemplazar: <img src="assets/img/ejemplar-bella-isabella.jpg" ... /> -->
+              <span class="ejemplar-card__badge ejemplar-card__badge--female">
+                <i class="fa-solid fa-venus" aria-hidden="true"></i> Hembra
+              </span>
+            </div>
+            <div class="ejemplar-card__body">
+              <h3 class="ejemplar-card__name">Bella Isabella</h3>
+              <p class="ejemplar-card__subtitle">La matriarca · Temperamento excepcional</p>
+              <dl class="ejemplar-card__specs">
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-dna" aria-hidden="true"></i> Pedigrí</dt>
+                  <dd>FCI registrado · 4 generaciones</dd>
+                </div>
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-weight-scale" aria-hidden="true"></i> Peso</dt>
+                  <dd>4,8 kg · Talla estándar</dd>
+                </div>
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-face-smile" aria-hidden="true"></i> Temperamento</dt>
+                  <dd>Cariñosa, tranquila, maternal</dd>
+                </div>
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Salud</dt>
+                  <dd>Exámenes oculares y cardíacos OK</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- ── Ejemplar 3 ── -->
+          <article class="ejemplar-card">
+            <!-- FOTO: Retrato del segundo macho o hembra. Fondo neutro o exterior.
+                 Tamaño recomendado: 500×600 px. -->
+            <div class="ejemplar-card__img-wrap">
+              <img
+                src="assets/img/ejemplar-3.jpg"
+                alt="Ejemplar macho Shih Tzu Prince Gold"
+                loading="lazy"
+                width="500"
+                height="600"
+              />
+              <!-- Reemplazar: <img src="assets/img/ejemplar-prince-gold.jpg" ... /> -->
+              <span class="ejemplar-card__badge ejemplar-card__badge--male">
+                <i class="fa-solid fa-mars" aria-hidden="true"></i> Macho
+              </span>
+            </div>
+            <div class="ejemplar-card__body">
+              <h3 class="ejemplar-card__name">Prince Gold</h3>
+              <p class="ejemplar-card__subtitle">Joven semental · Pelaje excepcional</p>
+              <dl class="ejemplar-card__specs">
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-dna" aria-hidden="true"></i> Pedigrí</dt>
+                  <dd>FCI registrado · 2 generaciones</dd>
+                </div>
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-weight-scale" aria-hidden="true"></i> Peso</dt>
+                  <dd>5,0 kg · Talla estándar</dd>
+                </div>
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-face-smile" aria-hidden="true"></i> Temperamento</dt>
+                  <dd>Activo, inteligente, afectuoso</dd>
+                </div>
+                <div class="spec-row">
+                  <dt><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Salud</dt>
+                  <dd>Sin patologías detectadas</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+        </div><!-- /.ejemplares__grid -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 4: CACHORROS DISPONIBLES
+    ============================================================ -->
+    <section class="cachorros" id="cachorros" aria-label="Cachorros disponibles">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">⭐ La sección estrella</span>
+          <h2 class="section-title">Cachorros <em>Disponibles</em></h2>
+          <p class="section-desc">Cada cachorro sale con carnet de vacunas, desparasitación, microchip y acompañamiento post-entrega. Las reservas se hacen con contrato formal.</p>
+        </div>
+
+        <div class="cachorros__grid">
+
+          <!-- ── Cachorro 1: Disponible ── -->
+          <article class="puppy-card puppy-card--available">
+            <!-- FOTO: Cachorro 1. Foto frontal, preferiblemente sobre fondo blanco o neutro.
+                 Tamaño recomendado: 500×500 px (cuadrado). -->
+            <div class="puppy-card__img-wrap">
+              <img
+                src="assets/img/cachorro-1.jpg"
+                alt="Cachorro Shih Tzu Luna — Disponible"
+                loading="lazy"
+                width="500"
+                height="500"
+              />
+              <!-- Reemplazar: <img src="assets/img/cachorro-luna.jpg" ... /> -->
+              <span class="puppy-card__status puppy-card__status--available">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
+              </span>
+            </div>
+            <div class="puppy-card__body">
+              <h3 class="puppy-card__name">Luna ✨</h3>
+              <div class="puppy-card__meta">
+                <span><i class="fa-solid fa-venus" aria-hidden="true"></i> Hembra</span>
+                <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 8 semanas</span>
+                <span><i class="fa-solid fa-palette" aria-hidden="true"></i> Tricolor</span>
+              </div>
+              <p class="puppy-card__desc">Personalidad dulce y curiosa. Adora los mimos y se lleva de maravilla con niños.</p>
+              <a href="#contacto" class="btn btn--gold btn--sm">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Luna
+              </a>
+            </div>
+          </article>
+
+          <!-- ── Cachorro 2: Disponible ── -->
+          <article class="puppy-card puppy-card--available">
+            <!-- FOTO: Cachorro 2. Foto frontal, fondo neutro.
+                 Tamaño recomendado: 500×500 px. -->
+            <div class="puppy-card__img-wrap">
+              <img
+                src="assets/img/cachorro-2.jpg"
+                alt="Cachorro Shih Tzu Bruno — Disponible"
+                loading="lazy"
+                width="500"
+                height="500"
+              />
+              <!-- Reemplazar: <img src="assets/img/cachorro-bruno.jpg" ... /> -->
+              <span class="puppy-card__status puppy-card__status--available">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
+              </span>
+            </div>
+            <div class="puppy-card__body">
+              <h3 class="puppy-card__name">Bruno 🐾</h3>
+              <div class="puppy-card__meta">
+                <span><i class="fa-solid fa-mars" aria-hidden="true"></i> Macho</span>
+                <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 9 semanas</span>
+                <span><i class="fa-solid fa-palette" aria-hidden="true"></i> Dorado y blanco</span>
+              </div>
+              <p class="puppy-card__desc">Activo y juguetón, con un carácter increíble. Perfecto para familias dinámicas.</p>
+              <a href="#contacto" class="btn btn--gold btn--sm">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Bruno
+              </a>
+            </div>
+          </article>
+
+          <!-- ── Cachorro 3: Reservado ── -->
+          <article class="puppy-card puppy-card--reserved">
+            <!-- FOTO: Cachorro 3 (reservado). Fondo neutro.
+                 Tamaño recomendado: 500×500 px. -->
+            <div class="puppy-card__img-wrap">
+              <img
+                src="assets/img/cachorro-3.jpg"
+                alt="Cachorro Shih Tzu Mochi — Reservado"
+                loading="lazy"
+                width="500"
+                height="500"
+              />
+              <!-- Reemplazar: <img src="assets/img/cachorro-mochi.jpg" ... /> -->
+              <span class="puppy-card__status puppy-card__status--reserved">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i> Reservado
+              </span>
+            </div>
+            <div class="puppy-card__body">
+              <h3 class="puppy-card__name">Mochi 🍡</h3>
+              <div class="puppy-card__meta">
+                <span><i class="fa-solid fa-venus" aria-hidden="true"></i> Hembra</span>
+                <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 7 semanas</span>
+                <span><i class="fa-solid fa-palette" aria-hidden="true"></i> Blanco puro</span>
+              </div>
+              <p class="puppy-card__desc">Pelaje sedoso impresionante. Ya tiene familia esperándola con ansias.</p>
+              <button class="btn btn--ghost btn--sm" disabled aria-label="Cachorro reservado, no disponible">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i> Ya tiene dueño
+              </button>
+            </div>
+          </article>
+
+          <!-- ── Cachorro 4: Próxima camada ── -->
+          <article class="puppy-card puppy-card--upcoming">
+            <div class="puppy-card__img-wrap puppy-card__img-wrap--upcoming">
+              <div class="puppy-card__upcoming-placeholder" aria-label="Próxima camada en camino">
+                <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                <span>Próximamente</span>
+              </div>
+              <span class="puppy-card__status puppy-card__status--upcoming">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i> Próxima camada
+              </span>
+            </div>
+            <div class="puppy-card__body">
+              <h3 class="puppy-card__name">Nueva camada 🐣</h3>
+              <div class="puppy-card__meta">
+                <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> Agosto 2026</span>
+                <span><i class="fa-solid fa-baby" aria-hidden="true"></i> 3-4 cachorros</span>
+              </div>
+              <p class="puppy-card__desc">¡La siguiente camada está en camino! Anótate en lista de espera para tener prioridad.</p>
+              <a href="#contacto" class="btn btn--gold btn--sm">
+                <i class="fa-solid fa-bell" aria-hidden="true"></i> Unirme a lista de espera
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /.cachorros__grid -->
+
+        <div class="cachorros__notice">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          <p>Todos nuestros cachorros se entregan con <strong>contrato de compraventa</strong>, carnet de vacunas, chip de identificación y seguimiento veterinario. Realizamos entregas en [tu ciudad] y coordinamos envíos a todo el país.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 5: CUIDADOS DEL SHIH TZU
+    ============================================================ -->
+    <section class="cuidados" id="cuidados" aria-label="Cuidados del Shih Tzu">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Guía de cuidados</span>
+          <h2 class="section-title">Todo sobre el cuidado<br>de tu <em>Shih Tzu</em></h2>
+          <p class="section-desc">La raza más encantadora también requiere atenciones especiales. Aquí te compartimos lo que aprendimos en 10 años de crianza.</p>
+        </div>
+
+        <div class="cuidados__grid">
+
+          <article class="care-card">
+            <!-- FOTO: Imagen de grooming / baño de Shih Tzu o peluquería canina.
+                 Tamaño recomendado: 400×280 px, ratio 3:2. -->
+            <div class="care-card__img">
+              <img
+                src="assets/img/cuidado-pelaje.jpg"
+                alt="Shih Tzu siendo peinado por una peluquera canina"
+                loading="lazy"
+                width="400"
+                height="280"
+              />
+              <!-- Reemplazar: <img src="assets/img/cuidados-pelaje.jpg" ... /> -->
+            </div>
+            <div class="care-card__body">
+              <span class="care-card__tag">
+                <i class="fa-solid fa-scissors" aria-hidden="true"></i> Pelaje
+              </span>
+              <h3 class="care-card__title">Cuidado del Pelaje</h3>
+              <p>El Shih Tzu tiene un pelaje doble, largo y sedoso que requiere <strong>cepillado diario</strong> para evitar nudos. Se recomienda visita a la peluquería canina cada 6-8 semanas. El corte "cachorro" o "teddy bear" es el favorito para el día a día.</p>
+              <ul class="care-card__tips">
+                <li>Cepilla siempre de la raíz a la punta</li>
+                <li>Usa spray desenredante antes de peinar</li>
+                <li>Limpia los lagrimales a diario con gasa húmeda</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="care-card">
+            <!-- FOTO: Bowl de comida premium para perros o Shih Tzu comiendo.
+                 Tamaño recomendado: 400×280 px, ratio 3:2. -->
+            <div class="care-card__img">
+              <img
+                src="assets/img/cuidado-food.jpg"
+                alt="Shih Tzu frente a su tazón de comida premium"
+                loading="lazy"
+                width="400"
+                height="280"
+              />
+              <!-- Reemplazar: <img src="assets/img/cuidados-alimentacion.jpg" ... /> -->
+            </div>
+            <div class="care-card__body">
+              <span class="care-card__tag">
+                <i class="fa-solid fa-bowl-food" aria-hidden="true"></i> Alimentación
+              </span>
+              <h3 class="care-card__title">Nutrición Óptima</h3>
+              <p>Para un Shih Tzu saludable, elige una dieta de <strong>alta calidad</strong> formulada para razas pequeñas. Los cachorros comen 3-4 veces al día; los adultos, 2 veces. Evita comida humana, especialmente chocolate, uvas y cebolla.</p>
+              <ul class="care-card__tips">
+                <li>Proteína animal como primer ingrediente</li>
+                <li>Agua fresca disponible siempre</li>
+                <li>Snacks saludables: zanahoria, arándanos</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="care-card">
+            <!-- FOTO: Shih Tzu jugando en el parque o con juguetes en casa.
+                 Tamaño recomendado: 400×280 px, ratio 3:2. -->
+            <div class="care-card__img">
+              <img
+                src="assets/img/cuidado-ejercicio.jpg"
+                alt="Shih Tzu jugando alegremente en el jardín"
+                loading="lazy"
+                width="400"
+                height="280"
+              />
+              <!-- Reemplazar: <img src="assets/img/cuidados-ejercicio.jpg" ... /> -->
+            </div>
+            <div class="care-card__body">
+              <span class="care-card__tag">
+                <i class="fa-solid fa-person-running" aria-hidden="true"></i> Ejercicio y Carácter
+              </span>
+              <h3 class="care-card__title">Ejercicio y Personalidad</h3>
+              <p>El Shih Tzu es una raza de <strong>interior por naturaleza</strong>. Con 20-30 minutos de caminata diaria y juego en casa es suficiente. Son perros <em>extremadamente sociables</em>, leales y muy buenos con niños y otros animales.</p>
+              <ul class="care-card__tips">
+                <li>Evita el calor excesivo (braquicéfalo)</li>
+                <li>Socializa desde cachorro</li>
+                <li>El entrenamiento positivo funciona muy bien</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="care-card">
+            <!-- FOTO: Veterinario revisando a un Shih Tzu o Shih Tzu en clínica veterinaria.
+                 Tamaño recomendado: 400×280 px, ratio 3:2. -->
+            <div class="care-card__img">
+              <img
+                src="assets/img/cuidado-salud.jpg"
+                alt="Veterinario revisando a un Shih Tzu con estetoscopio"
+                loading="lazy"
+                width="400"
+                height="280"
+              />
+              <!-- Reemplazar: <img src="assets/img/cuidados-salud.jpg" ... /> -->
+            </div>
+            <div class="care-card__body">
+              <span class="care-card__tag">
+                <i class="fa-solid fa-kit-medical" aria-hidden="true"></i> Salud
+              </span>
+              <h3 class="care-card__title">Salud y Veterinaria</h3>
+              <p>Los Shih Tzu son razas <strong>braquicéfalas</strong> (hocico corto), lo que requiere atención especial en su respiración y temperatura. Chequeos veterinarios semestrales y vacunas anuales son indispensables. Pon atención a sus ojos y oídos.</p>
+              <ul class="care-card__tips">
+                <li>Vacunas: moquillo, parvovirus, hepatitis, rabia</li>
+                <li>Desparasitación interna y externa mensual</li>
+                <li>Limpieza dental 2-3 veces por semana</li>
+              </ul>
+            </div>
+          </article>
+
+        </div><!-- /.cuidados__grid -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 6: CONTACTO
+    ============================================================ -->
+    <section class="contacto" id="contacto" aria-label="Contacto">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Hablemos</span>
+          <h2 class="section-title">¿Listo para conocer<br>a tu <em>nuevo amigo</em>?</h2>
+          <p class="section-desc">Escríbenos y te respondemos a la brevedad. También puedes contactarnos directamente por WhatsApp o Instagram.</p>
+        </div>
+
+        <div class="contacto__layout">
+
+          <!-- Formulario de contacto -->
+          <div class="contacto__form-wrap">
+            <form
+              class="contact-form"
+              id="contactForm"
+              novalidate
+              aria-label="Formulario de consulta"
+            >
+              <div class="form-group">
+                <label for="nombre" class="form-label">Nombre completo <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="form-input"
+                  placeholder="Tu nombre"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Correo electrónico <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="tu@email.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="telefono" class="form-label">Teléfono / WhatsApp</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  class="form-input"
+                  placeholder="+56 9 XXXX XXXX"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="interes" class="form-label">Me interesa</label>
+                <select id="interes" name="interes" class="form-input form-select">
+                  <option value="">Selecciona una opción…</option>
+                  <option value="cachorro-disponible">Cachorro disponible ahora</option>
+                  <option value="lista-espera">Lista de espera próxima camada</option>
+                  <option value="mas-info">Más información del criadero</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje" class="form-label">Mensaje <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  class="form-input form-textarea"
+                  placeholder="Cuéntanos quién eres y qué cachorro buscas…"
+                  rows="5"
+                  required
+                  aria-required="true"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--gold btn--full">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                Enviar consulta
+              </button>
+
+              <p class="form-privacy">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                Tus datos están seguros. No compartimos tu información con terceros.
+              </p>
+            </form>
+          </div>
+
+          <!-- Panel de contacto directo + ubicación -->
+          <div class="contacto__info">
+
+            <div class="contact-info-card">
+              <h3 class="contact-info-card__title">Contáctanos directamente</h3>
+
+              <a
+                href="https://wa.me/56900000000?text=Hola!%20Vi%20su%20criadero%20y%20me%20interesa%20un%20Shih%20Tzu%20%F0%9F%90%BE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-channel contact-channel--whatsapp"
+                aria-label="Contactar por WhatsApp"
+              >
+                <span class="contact-channel__icon">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                </span>
+                <span class="contact-channel__info">
+                  <strong>WhatsApp</strong>
+                  <!-- Reemplaza el número real aquí y en el href de arriba -->
+                  <span>+56 9 XXXX XXXX</span>
+                </span>
+                <span class="contact-channel__arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/tu_usuario_real"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-channel contact-channel--instagram"
+                aria-label="Seguir en Instagram"
+              >
+                <!-- Reemplaza href con tu usuario de Instagram real -->
+                <span class="contact-channel__icon">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </span>
+                <span class="contact-channel__info">
+                  <strong>Instagram</strong>
+                  <span>@isabellaroyal_shihtzu</span>
+                </span>
+                <span class="contact-channel__arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a
+                href="mailto:contacto@isabellaroyal.cl"
+                class="contact-channel contact-channel--email"
+                aria-label="Enviar correo electrónico"
+              >
+                <!-- Reemplaza con tu email real -->
+                <span class="contact-channel__icon">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </span>
+                <span class="contact-channel__info">
+                  <strong>Email</strong>
+                  <span>contacto@isabellaroyal.cl</span>
+                </span>
+                <span class="contact-channel__arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="contact-location-card">
+              <h3 class="contact-info-card__title">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Ubicación y entregas
+              </h3>
+              <p>Estamos ubicados en <strong>[Tu ciudad, País]</strong>.</p>
+              <p>Realizamos entregas personales en la ciudad y coordinamos envíos seguros a todo el país en cabina de avión con personal de confianza.</p>
+              <div class="location-badge-wrap">
+                <span class="location-badge">
+                  <i class="fa-solid fa-plane" aria-hidden="true"></i>
+                  Envíos nacionales
+                </span>
+                <span class="location-badge">
+                  <i class="fa-solid fa-car" aria-hidden="true"></i>
+                  Entrega a domicilio local
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-hours-card">
+              <h3 class="contact-info-card__title">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                Horario de atención
+              </h3>
+              <dl class="hours-list">
+                <div class="hours-row">
+                  <dt>Lunes a Viernes</dt>
+                  <dd>10:00 – 19:00</dd>
+                </div>
+                <div class="hours-row">
+                  <dt>Sábados</dt>
+                  <dd>10:00 – 14:00</dd>
+                </div>
+                <div class="hours-row">
+                  <dt>Domingos</dt>
+                  <dd>Solo WhatsApp</dd>
+                </div>
+              </dl>
+            </div>
+
+          </div><!-- /.contacto__info -->
+        </div><!-- /.contacto__layout -->
+
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <a href="#inicio" class="footer__logo" aria-label="Volver al inicio">
+            <img
+              src="assets/img/logo.png"
+              alt="Logo Isabella Royal Criadero de Shih Tzu"
+              class="footer__logo-img"
+              width="90"
+              height="90"
+              loading="lazy"
+            />
+          </a>
+          <p class="footer__tagline">Crianza ética y responsable.<br>Cada cachorro, una historia de amor.</p>
+          <div class="footer__social">
+            <a href="https://wa.me/56900000000" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--wa" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/tu_usuario_real" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--ig" aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:contacto@isabellaroyal.cl" class="social-icon social-icon--email" aria-label="Email">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Navegación del footer">
+          <h4 class="footer__nav-title">Secciones</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Quiénes Somos</a></li>
+            <li><a href="#ejemplares">Ejemplares</a></li>
+            <li><a href="#cachorros">Cachorros</a></li>
+            <li><a href="#cuidados">Cuidados</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__certif">
+          <h4 class="footer__nav-title">Compromiso</h4>
+          <ul class="footer__certif-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Crianza en hogar, no kennel</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Exámenes veterinarios completos</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Pedigrí verificable FCI</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Contrato formal en cada venta</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Seguimiento post-entrega</li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer__top -->
+
+      <div class="footer__bottom">
+        <p>© 2026 IsabellaRoyal Shih Tzu. Todos los derechos reservados.</p>
+        <p>Hecho con <i class="fa-solid fa-heart" aria-hidden="true" style="color:var(--rosa);"></i> para los amantes de la raza.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a
+    href="https://wa.me/56900000000?text=Hola!%20Quiero%20consultar%20por%20un%20Shih%20Tzu%20%F0%9F%90%BE"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-fab"
+    aria-label="Contactar por WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    <span class="whatsapp-fab__tooltip">¡Escríbenos!</span>
+  </a>
+
+  <!-- Script principal: IIFE, sin módulos ES -->
+  <script defer src="main.js?v=20260625"></script>
+
+</body>
+</html>
