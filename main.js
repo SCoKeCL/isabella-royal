@@ -294,16 +294,287 @@
   }
 
   /* ══════════════════════════════
+     7. CARRUSEL de Ejemplares
+  ══════════════════════════════ */
+  function initEjemplaresCarousel() {
+    var carousel = document.getElementById("ejemplaresCarousel");
+    if (!carousel) return;
+
+    var track    = carousel.querySelector(".ejm-carousel__track");
+    var btnPrev  = carousel.querySelector(".ejm-carousel__btn--prev");
+    var btnNext  = carousel.querySelector(".ejm-carousel__btn--next");
+    var dotsWrap = carousel.querySelector(".ejm-carousel__dots");
+    var cards    = Array.from(track.querySelectorAll(".ejemplar-card"));
+
+    if (!cards.length) return;
+
+    var current = 0;
+
+    function getVisible() {
+      var w = carousel.offsetWidth;
+      if (w < 580) return 1;
+      if (w < 960) return 2;
+      return 3;
+    }
+
+    function totalSlides() {
+      return Math.max(1, cards.length - getVisible() + 1);
+    }
+
+    function buildDots() {
+      dotsWrap.innerHTML = "";
+      var total = totalSlides();
+      if (total <= 1) return;
+      for (var i = 0; i < total; i++) {
+        var dot = document.createElement("button");
+        dot.className = "ejm-carousel__dot" + (i === current ? " is-active" : "");
+        dot.setAttribute("aria-label", "Ir al ejemplar " + (i + 1));
+        (function(idx) {
+          dot.addEventListener("click", function() { goTo(idx); });
+        })(i);
+        dotsWrap.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      var dots = dotsWrap.querySelectorAll(".ejm-carousel__dot");
+      dots.forEach(function(d, i) {
+        d.classList.toggle("is-active", i === current);
+      });
+    }
+
+    function goTo(idx) {
+      var total = totalSlides();
+      current = Math.max(0, Math.min(idx, total - 1));
+
+      var visible   = getVisible();
+      var gap       = 32; // 2rem en px
+      var cardWidth = (track.parentElement.offsetWidth - gap * (visible - 1)) / visible;
+      var offset    = current * (cardWidth + gap);
+
+      track.style.transform = "translateX(-" + offset + "px)";
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current >= total - 1;
+      updateDots();
+    }
+
+    function resize() {
+      buildDots();
+      if (current >= totalSlides()) current = totalSlides() - 1;
+      goTo(current);
+    }
+
+    // Swipe táctil
+    var touchStartX = 0;
+    track.addEventListener("touchstart", function(e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener("touchend", function(e) {
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+    }, { passive: true });
+
+    btnPrev.addEventListener("click", function() { goTo(current - 1); });
+    btnNext.addEventListener("click", function() { goTo(current + 1); });
+
+    window.addEventListener("resize", resize);
+    resize();
+  }
+
+  /* ══════════════════════════════
+     8. LIGHTBOX de galería
+  ══════════════════════════════ */
+  function initLightbox() {
+    var lb        = document.getElementById("lightbox");
+    var lbImg     = document.getElementById("lightboxImg");
+    var lbName    = document.getElementById("lightboxName");
+    var lbCounter = document.getElementById("lightboxCounter");
+    var lbThumbs  = document.getElementById("lightboxThumbs");
+    var lbClose   = document.getElementById("lightboxClose");
+    var lbPrev    = document.getElementById("lightboxPrev");
+    var lbNext    = document.getElementById("lightboxNext");
+    if (!lb) return;
+
+    var gallery = [];
+    var current = 0;
+
+    function showImg(idx) {
+      current = idx;
+      lbImg.src = gallery[idx];
+      lbImg.style.animation = "none";
+      lbImg.offsetWidth; // reflow
+      lbImg.style.animation = "";
+      lbCounter.textContent = gallery.length > 1 ? (idx + 1) + " / " + gallery.length : "";
+      lbPrev.disabled = idx === 0;
+      lbNext.disabled = idx === gallery.length - 1;
+      lbThumbs.querySelectorAll(".lightbox__thumb").forEach(function(t, i) {
+        t.classList.toggle("is-active", i === idx);
+      });
+    }
+
+    function open(name, imgs, startIdx) {
+      gallery = imgs;
+      lbName.textContent = name;
+      lbThumbs.innerHTML = "";
+      if (imgs.length > 1) {
+        imgs.forEach(function(src, i) {
+          var t = document.createElement("img");
+          t.src = src;
+          t.className = "lightbox__thumb";
+          t.alt = name + " foto " + (i + 1);
+          t.addEventListener("click", function() { showImg(i); });
+          lbThumbs.appendChild(t);
+        });
+      }
+      lb.hidden = false;
+      document.body.style.overflow = "hidden";
+      showImg(startIdx || 0);
+    }
+
+    function close() {
+      lb.hidden = true;
+      document.body.style.overflow = "";
+      lbImg.src = "";
+    }
+
+    // Abrir al hacer click en .gallery-trigger
+    document.querySelectorAll(".gallery-trigger").forEach(function(trigger) {
+      trigger.addEventListener("click", function() {
+        var card = trigger.closest("[data-gallery]");
+        if (!card) return;
+        var imgs = JSON.parse(card.dataset.gallery || "[]");
+        var name = card.dataset.name || "";
+        if (!imgs.length) return;
+        open(name, imgs, 0);
+      });
+    });
+
+    lbClose.addEventListener("click", close);
+    lbPrev.addEventListener("click", function() { if (current > 0) showImg(current - 1); });
+    lbNext.addEventListener("click", function() { if (current < gallery.length - 1) showImg(current + 1); });
+
+    // Cerrar al hacer clic en el fondo
+    lb.addEventListener("click", function(e) { if (e.target === lb) close(); });
+
+    // Teclado: Escape cierra, flechas navegan
+    document.addEventListener("keydown", function(e) {
+      if (lb.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft"  && current > 0) showImg(current - 1);
+      if (e.key === "ArrowRight" && current < gallery.length - 1) showImg(current + 1);
+    });
+
+    // Swipe táctil en el lightbox
+    var swipeX = 0;
+    lbImg.addEventListener("touchstart", function(e) { swipeX = e.touches[0].clientX; }, { passive: true });
+    lbImg.addEventListener("touchend", function(e) {
+      var diff = swipeX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0 && current < gallery.length - 1) showImg(current + 1);
+        if (diff < 0 && current > 0) showImg(current - 1);
+      }
+    }, { passive: true });
+  }
+
+  /* ══════════════════════════════
+     9. CARRUSEL de Cachorros
+  ══════════════════════════════ */
+  function initCachorrosCarousel() {
+    var carousel = document.getElementById("cachorrosCarousel");
+    if (!carousel) return;
+
+    var track    = carousel.querySelector(".ejm-carousel__track");
+    var btnPrev  = carousel.querySelector(".ejm-carousel__btn--prev");
+    var btnNext  = carousel.querySelector(".ejm-carousel__btn--next");
+    var dotsWrap = carousel.querySelector(".ejm-carousel__dots");
+    var cards    = Array.from(track.querySelectorAll(".puppy-card"));
+
+    if (!cards.length) return;
+
+    var current = 0;
+
+    function getVisible() {
+      var w = carousel.offsetWidth;
+      if (w < 580) return 1;
+      if (w < 960) return 2;
+      return 3;
+    }
+
+    function totalSlides() {
+      return Math.max(1, cards.length - getVisible() + 1);
+    }
+
+    function buildDots() {
+      dotsWrap.innerHTML = "";
+      var total = totalSlides();
+      if (total <= 1) return;
+      for (var i = 0; i < total; i++) {
+        var dot = document.createElement("button");
+        dot.className = "ejm-carousel__dot" + (i === current ? " is-active" : "");
+        dot.setAttribute("aria-label", "Ir al cachorro " + (i + 1));
+        (function(idx) {
+          dot.addEventListener("click", function() { goTo(idx); });
+        })(i);
+        dotsWrap.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      var dots = dotsWrap.querySelectorAll(".ejm-carousel__dot");
+      dots.forEach(function(d, i) {
+        d.classList.toggle("is-active", i === current);
+      });
+    }
+
+    function goTo(idx) {
+      var total = totalSlides();
+      current = Math.max(0, Math.min(idx, total - 1));
+      var visible   = getVisible();
+      var gap       = 32;
+      var cardWidth = (track.parentElement.offsetWidth - gap * (visible - 1)) / visible;
+      var offset    = current * (cardWidth + gap);
+      track.style.transform = "translateX(-" + offset + "px)";
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current >= total - 1;
+      updateDots();
+    }
+
+    function resize() {
+      buildDots();
+      if (current >= totalSlides()) current = totalSlides() - 1;
+      goTo(current);
+    }
+
+    var touchStartX = 0;
+    track.addEventListener("touchstart", function(e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener("touchend", function(e) {
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+    }, { passive: true });
+
+    btnPrev.addEventListener("click", function() { goTo(current - 1); });
+    btnNext.addEventListener("click", function() { goTo(current + 1); });
+
+    window.addEventListener("resize", resize);
+    resize();
+  }
+
+  /* ══════════════════════════════
      BOOT — arranca todo
   ══════════════════════════════ */
   function boot() {
-    safe(initLogoFallback, "initLogoFallback");
-    safe(initNavbar,       "initNavbar");
-    safe(initSmoothScroll, "initSmoothScroll");
-    safe(initReveal,       "initReveal");
-    safe(initCounters,     "initCounters");
-    safe(initForm,         "initForm");
-    safe(initTilt,         "initTilt");
+    safe(initLogoFallback,        "initLogoFallback");
+    safe(initNavbar,              "initNavbar");
+    safe(initSmoothScroll,        "initSmoothScroll");
+    safe(initReveal,              "initReveal");
+    safe(initCounters,            "initCounters");
+    safe(initForm,                "initForm");
+    safe(initTilt,                "initTilt");
+    safe(initLightbox,            "initLightbox");
+    safe(initEjemplaresCarousel,  "initEjemplaresCarousel");
+    safe(initCachorrosCarousel,   "initCachorrosCarousel");
   }
 
   if (document.readyState === "loading") {

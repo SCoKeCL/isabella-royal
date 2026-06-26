@@ -302,9 +302,9 @@
               </article>
               
               <!-- ── Ejemplar 5 ── -->
-              <article class="ejemplar-card" data-name="Max Royal" data-gallery='["assets/img/ejemplar-5.png","assets/img/Maxi-2.jpeg"]'>
+              <article class="ejemplar-card" data-name="Max Royal" data-gallery='["assets/img/ejemplar-5.jpeg","assets/img/Maxi-2.jpeg"]'>
                 <div class="ejemplar-card__img-wrap gallery-trigger" title="Ver fotos">
-                  <img src="assets/img/ejemplar-5.png" alt="Ejemplar macho Shih Tzu Max Royal" loading="lazy" width="500" height="600" />
+                  <img src="assets/img/ejemplar-5.jpeg" alt="Ejemplar macho Shih Tzu Max Royal" loading="lazy" width="500" height="600" />
                   <span class="ejemplar-card__badge ejemplar-card__badge--male">
                     <i class="fa-solid fa-mars" aria-hidden="true"></i> Macho
                   </span>
