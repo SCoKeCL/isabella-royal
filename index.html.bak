@@ -125,7 +125,7 @@
                  Tamaño recomendado: 600×750 px. -->
             <div class="about__img-main">
               <img
-                src="assets/img/about-family.jpg"
+                src="assets/img/about-family.jpeg"
                 alt="Familia del criadero IsabellaRoyal con sus Shih Tzu"
                 loading="lazy"
                 width="600"
@@ -161,11 +161,11 @@
 
             <div class="about__stats">
               <div class="about__stat">
-                <span class="about__stat-num">+50</span>
+                <span class="about__stat-num">+115</span>
                 <span class="about__stat-label">Cachorros en hogares felices</span>
               </div>
               <div class="about__stat">
-                <span class="about__stat-num">10</span>
+                <span class="about__stat-num">+11</span>
                 <span class="about__stat-label">Años de experiencia</span>
               </div>
               <div class="about__stat">
@@ -403,7 +403,7 @@
             <div class="ejm-carousel__track">
 
               <!-- ── Cachorro 1: Disponible ── -->
-              <article class="puppy-card puppy-card--available" data-name="Luna ✨" data-gallery='["assets/img/camadas/hembra1-1.jpeg","assets/img/camadas/hembra1-2.jpeg"]'>
+              <article class="puppy-card puppy-card--available" data-name="Hembra 1 ✨" data-gallery='["assets/img/camadas/hembra1-1.jpeg","assets/img/camadas/hembra1-2.jpeg"]'>
                 <div class="puppy-card__img-wrap gallery-trigger" title="Ver fotos">
                   <img src="assets/img/camadas/hembra1-1.jpeg" alt="Cachorra Shih Tzu — Disponible" loading="lazy" width="500" height="500" />
                   <span class="puppy-card__status puppy-card__status--available">
@@ -425,15 +425,15 @@
               </article>
 
               <!-- ── Cachorro 2: Disponible ── -->
-              <article class="puppy-card puppy-card--available" data-name="Bruno 🐾" data-gallery='["assets/img/cachorro-2.jpg"]'>
+              <article class="puppy-card puppy-card--available" data-name="Macho 1 🐾" data-gallery='["assets/img/camadas/macho1-1.jpeg","assets/img/camadas/macho1-2.jpeg"]'>
                 <div class="puppy-card__img-wrap gallery-trigger" title="Ver fotos">
-                  <img src="assets/img/cachorro-2.jpg" alt="Cachorro Shih Tzu Bruno — Disponible" loading="lazy" width="500" height="500" />
+                  <img src="assets/img/camadas/macho1-1.jpeg" alt="Cachorro Shih Tzu — Disponible" loading="lazy" width="500" height="500" />
                   <span class="puppy-card__status puppy-card__status--available">
                     <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
                   </span>
                 </div>
                 <div class="puppy-card__body">
-                  <h3 class="puppy-card__name">Bruno 🐾</h3>
+                  <h3 class="puppy-card__name">Macho 1 🐾</h3>
                   <div class="puppy-card__meta">
                     <span><i class="fa-solid fa-mars" aria-hidden="true"></i> Macho</span>
                     <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 9 semanas</span>
@@ -441,7 +441,117 @@
                   </div>
                   <p class="puppy-card__desc">Activo y juguetón, con un carácter increíble. Perfecto para familias dinámicas.</p>
                   <a href="#contacto" class="btn btn--gold btn--sm">
-                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Bruno
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Macho 1
+                  </a>
+                </div>
+              </article>
+              
+              <!-- ── Cachorro 3: Disponible ── -->
+              <article class="puppy-card puppy-card--available" data-name="Macho 2 🐾" data-gallery='["assets/img/camadas/macho2-1.jpeg","assets/img/camadas/macho2-2.jpeg"]'>
+                <div class="puppy-card__img-wrap gallery-trigger" title="Ver fotos">
+                  <img src="assets/img/camadas/macho2-1.jpeg" alt="Cachorro Shih Tzu — Disponible" loading="lazy" width="500" height="500" />
+                  <span class="puppy-card__status puppy-card__status--available">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
+                  </span>
+                </div>
+                <div class="puppy-card__body">
+                  <h3 class="puppy-card__name">Macho 2 🐾</h3>
+                  <div class="puppy-card__meta">
+                    <span><i class="fa-solid fa-mars" aria-hidden="true"></i> Macho</span>
+                    <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 9 semanas</span>
+                    <span><i class="fa-solid fa-palette" aria-hidden="true"></i> Dorado y blanco</span>
+                  </div>
+                  <p class="puppy-card__desc">Activo y juguetón, con un carácter increíble. Perfecto para familias dinámicas.</p>
+                  <a href="#contacto" class="btn btn--gold btn--sm">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Macho 2
+                  </a>
+                </div>
+              </article>
+              
+              <!-- ── Cachorro 4: Disponible ── -->
+              <article class="puppy-card puppy-card--available" data-name="Macho 3 🐾" data-gallery='["assets/img/camadas/macho3-1.jpeg","assets/img/camadas/macho3-2.jpeg"]'>
+                <div class="puppy-card__img-wrap gallery-trigger" title="Ver fotos">
+                  <img src="assets/img/camadas/macho3-1.jpeg" alt="Cachorro Shih Tzu — Disponible" loading="lazy" width="500" height="500" />
+                  <span class="puppy-card__status puppy-card__status--available">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
+                  </span>
+                </div>
+                <div class="puppy-card__body">
+                  <h3 class="puppy-card__name">Macho 3 🐾</h3>
+                  <div class="puppy-card__meta">
+                    <span><i class="fa-solid fa-mars" aria-hidden="true"></i> Macho</span>
+                    <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 9 semanas</span>
+                    <span><i class="fa-solid fa-palette" aria-hidden="true"></i> Dorado y blanco</span>
+                  </div>
+                  <p class="puppy-card__desc">Activo y juguetón, con un carácter increíble. Perfecto para familias dinámicas.</p>
+                  <a href="#contacto" class="btn btn--gold btn--sm">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Macho 3
+                  </a>
+                </div>
+              </article>
+              
+              <!-- ── Cachorro 5: Disponible ── -->
+              <article class="puppy-card puppy-card--available" data-name="Hembra 2 ✨" data-gallery='["assets/img/camadas/hembra2-1.jpeg","assets/img/camadas/hembra2-2.jpeg"]'>
+                <div class="puppy-card__img-wrap gallery-trigger" title="Ver fotos">
+                  <img src="assets/img/camadas/hembra2-1.jpeg" alt="Cachorra Shih Tzu — Disponible" loading="lazy" width="500" height="500" />
+                  <span class="puppy-card__status puppy-card__status--available">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
+                  </span>
+                </div>
+                <div class="puppy-card__body">
+                  <h3 class="puppy-card__name">Hembra 2 ✨</h3>
+                  <div class="puppy-card__meta">
+                    <span><i class="fa-solid fa-venus" aria-hidden="true"></i> Hembra</span>
+                    <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 8 semanas</span>
+                    <span><i class="fa-solid fa-palette" aria-hidden="true"></i> Tricolor</span>
+                  </div>
+                  <p class="puppy-card__desc">Personalidad dulce y curiosa. Adora los mimos y se lleva de maravilla con niños.</p>
+                  <a href="#contacto" class="btn btn--gold btn--sm">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Hembra 2
+                  </a>
+                </div>
+              </article>
+              
+              <!-- ── Cachorro 6: Disponible ── -->
+              <article class="puppy-card puppy-card--available" data-name="Hembra 3 ✨" data-gallery='["assets/img/camadas/hembra3-1.jpeg","assets/img/camadas/hembra3-2.jpeg"]'>
+                <div class="puppy-card__img-wrap gallery-trigger" title="Ver fotos">
+                  <img src="assets/img/camadas/hembra3-1.jpeg" alt="Cachorra Shih Tzu — Disponible" loading="lazy" width="500" height="500" />
+                  <span class="puppy-card__status puppy-card__status--available">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
+                  </span>
+                </div>
+                <div class="puppy-card__body">
+                  <h3 class="puppy-card__name">Hembra 3 ✨</h3>
+                  <div class="puppy-card__meta">
+                    <span><i class="fa-solid fa-venus" aria-hidden="true"></i> Hembra</span>
+                    <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 8 semanas</span>
+                    <span><i class="fa-solid fa-palette" aria-hidden="true"></i> Tricolor</span>
+                  </div>
+                  <p class="puppy-card__desc">Personalidad dulce y curiosa. Adora los mimos y se lleva de maravilla con niños.</p>
+                  <a href="#contacto" class="btn btn--gold btn--sm">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Hembra 3
+                  </a>
+                </div>
+              </article>
+              
+              <!-- ── Cachorro 7: Disponible ── -->
+              <article class="puppy-card puppy-card--available" data-name="Hembra 4 ✨" data-gallery='["assets/img/camadas/hembra4-1.jpeg","assets/img/camadas/hembra4-2.jpeg"]'>
+                <div class="puppy-card__img-wrap gallery-trigger" title="Ver fotos">
+                  <img src="assets/img/camadas/hembra4-1.jpeg" alt="Cachorra Shih Tzu — Disponible" loading="lazy" width="500" height="500" />
+                  <span class="puppy-card__status puppy-card__status--available">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
+                  </span>
+                </div>
+                <div class="puppy-card__body">
+                  <h3 class="puppy-card__name">Hembra 4 ✨</h3>
+                  <div class="puppy-card__meta">
+                    <span><i class="fa-solid fa-venus" aria-hidden="true"></i> Hembra</span>
+                    <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 8 semanas</span>
+                    <span><i class="fa-solid fa-palette" aria-hidden="true"></i> Tricolor</span>
+                  </div>
+                  <p class="puppy-card__desc">Personalidad dulce y curiosa. Adora los mimos y se lleva de maravilla con niños.</p>
+                  <a href="#contacto" class="btn btn--gold btn--sm">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Hembra 4
                   </a>
                 </div>
               </article>
@@ -506,10 +616,11 @@
           <div class="ejm-carousel__dots" aria-label="Navegación del carrusel"></div>
 
         </div><!-- /.cachorros-carousel -->
-
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
         <div class="cachorros__notice">
           <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-          <p>Todos nuestros cachorros se entregan con <strong>contrato de compraventa</strong>, carnet de vacunas, chip de identificación y seguimiento veterinario. Realizamos entregas en [tu ciudad] y coordinamos envíos a todo el país.</p>
+          <p>Todos nuestros cachorros se entregan con <strong>contrato de compraventa</strong>, carnet de vacunas, chip de identificación y seguimiento veterinario. Realizamos entregas en la comuna de Pudahuel, Santiago y coordinamos envíos a todo el país.</p>
         </div>
 
       </div>
