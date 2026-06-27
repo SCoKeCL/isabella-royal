@@ -69,7 +69,7 @@
            Tamaño ideal: 1920×1080 px o superior. -->
       <div class="hero__bg">
         <img
-          src="assets/img/hero.jpg"
+          src="assets/img/Hero.jpeg"
           alt="Adorable cachorro Shih Tzu mirando a cámara"
           class="hero__bg-img"
           loading="eager"
@@ -222,7 +222,7 @@
             <div class="ejm-carousel__track">
 
               <!-- ── Ejemplar 1 ── -->
-              <article class="ejemplar-card" data-name="Max Royal" data-gallery='["assets/img/ejemplar-1.jpg","assets/img/Benito-2.jpeg"]'>
+              <article class="ejemplar-card" data-name="Benito" data-gallery='["assets/img/ejemplar-1.jpg","assets/img/Benito-2.jpeg"]'>
                 <div class="ejemplar-card__img-wrap gallery-trigger" title="Ver fotos">
                   <img src="assets/img/ejemplar-1.jpg" alt="Ejemplar macho Shih Tzu Max Royal" loading="lazy" width="500" height="600" />
                   <span class="ejemplar-card__badge ejemplar-card__badge--male">
@@ -242,7 +242,7 @@
               </article>
 
               <!-- ── Ejemplar 2 ── -->
-              <article class="ejemplar-card" data-name="Bella Isabella" data-gallery='["assets/img/ejemplar-2.jpg","assets/img/Mila-2.jpeg"]'>
+              <article class="ejemplar-card" data-name="Mila" data-gallery='["assets/img/ejemplar-2.jpg","assets/img/Mila-2.jpeg"]'>
                 <div class="ejemplar-card__img-wrap gallery-trigger" title="Ver fotos">
                   <img src="assets/img/ejemplar-2.jpg" alt="Ejemplar hembra Shih Tzu Bella Isabella" loading="lazy" width="500" height="600" />
                   <span class="ejemplar-card__badge ejemplar-card__badge--female">
@@ -250,7 +250,7 @@
                   </span>
                 </div>
                 <div class="ejemplar-card__body">
-                  <h3 class="ejemplar-card__name">Bella Isabella</h3>
+                  <h3 class="ejemplar-card__name">Mila</h3>
                   <p class="ejemplar-card__subtitle">La matriarca · Temperamento excepcional</p>
                   <dl class="ejemplar-card__specs">
                     <div class="spec-row"><dt><i class="fa-solid fa-dna" aria-hidden="true"></i> Pedigrí</dt><dd>FCI registrado · 4 generaciones</dd></div>
@@ -262,15 +262,15 @@
               </article>
 
               <!-- ── Ejemplar 3 ── -->
-              <article class="ejemplar-card" data-name="Prince Gold" data-gallery='["assets/img/ejemplar-3.jpeg","assets/img/Maya-2.jpeg","assets/img/Maya-3.jpeg","assets/img/Maya-4.jpeg"]'>
+              <article class="ejemplar-card" data-name="Rayún" data-gallery='["assets/img/yuyu-1.jpeg","assets/img/yuyu-2.jpeg","assets/img/yuyu-3.jpeg"]'>
                 <div class="ejemplar-card__img-wrap gallery-trigger" title="Ver fotos">
-                  <img src="assets/img/ejemplar-3.jpeg" alt="Ejemplar macho Shih Tzu Prince Gold" loading="lazy" width="500" height="600" />
+                  <img src="assets/img/yuyu-1.jpeg" alt="Ejemplar hembra Shih Tzu Prince Gold" loading="lazy" width="500" height="600" />
                   <span class="ejemplar-card__badge ejemplar-card__badge--female">
                     <i class="fa-solid fa-mars" aria-hidden="true"></i> Hembra
                   </span>
                 </div>
                 <div class="ejemplar-card__body">
-                  <h3 class="ejemplar-card__name">Amaya</h3>
+                  <h3 class="ejemplar-card__name">Rayún</h3>
                   <p class="ejemplar-card__subtitle">Joven semental · Pelaje excepcional</p>
                   <dl class="ejemplar-card__specs">
                     <div class="spec-row"><dt><i class="fa-solid fa-dna" aria-hidden="true"></i> Pedigrí</dt><dd>FCI registrado · 2 generaciones</dd></div>
@@ -282,7 +282,7 @@
               </article>
               
               <!-- ── Ejemplar 4 ── -->
-              <article class="ejemplar-card" data-name="Prince Gold" data-gallery='["assets/img/ejemplar-4.jpg","assets/img/Molly-2.jpeg"]'>
+              <article class="ejemplar-card" data-name="Molly" data-gallery='["assets/img/ejemplar-4.jpg","assets/img/Molly-2.jpeg"]'>
                 <div class="ejemplar-card__img-wrap gallery-trigger" title="Ver fotos">
                   <img src="assets/img/ejemplar-4.jpg" alt="Ejemplar macho Shih Tzu Prince Gold" loading="lazy" width="500" height="600" />
                   <span class="ejemplar-card__badge ejemplar-card__badge--female">
@@ -302,7 +302,7 @@
               </article>
               
               <!-- ── Ejemplar 5 ── -->
-              <article class="ejemplar-card" data-name="Max Royal" data-gallery='["assets/img/ejemplar-5.png","assets/img/Maxi-2.jpeg"]'>
+              <article class="ejemplar-card" data-name="Maxi" data-gallery='["assets/img/ejemplar-5.png","assets/img/Maxi-2.jpeg"]'>
                 <div class="ejemplar-card__img-wrap gallery-trigger" title="Ver fotos">
                   <img src="assets/img/ejemplar-5.png" alt="Ejemplar macho Shih Tzu Max Royal" loading="lazy" width="500" height="600" />
                   <span class="ejemplar-card__badge ejemplar-card__badge--male">
@@ -311,6 +311,46 @@
                 </div>
                 <div class="ejemplar-card__body">
                   <h3 class="ejemplar-card__name">Maxi</h3>
+                  <p class="ejemplar-card__subtitle">Campeón de belleza · Línea importada</p>
+                  <dl class="ejemplar-card__specs">
+                    <div class="spec-row"><dt><i class="fa-solid fa-dna" aria-hidden="true"></i> Pedigrí</dt><dd>FCI registrado · 3 generaciones</dd></div>
+                    <div class="spec-row"><dt><i class="fa-solid fa-weight-scale" aria-hidden="true"></i> Peso</dt><dd>5,2 kg · Talla estándar</dd></div>
+                    <div class="spec-row"><dt><i class="fa-solid fa-face-smile" aria-hidden="true"></i> Temperamento</dt><dd>Dócil, juguetón, sociable</dd></div>
+                    <div class="spec-row"><dt><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Salud</dt><dd>Libre de enfermedades hereditarias</dd></div>
+                  </dl>
+                </div>
+              </article>
+              
+              <!-- ── Ejemplar 6 ── -->
+              <article class="ejemplar-card" data-name="Amaya" data-gallery='["assets/img/maya-1.jpeg","assets/img/maya-2.jpeg"]'>
+                <div class="ejemplar-card__img-wrap gallery-trigger" title="Ver fotos">
+                  <img src="assets/img/maya-1.jpeg" alt="Ejemplar hembra Shih Tzu Max Royal" loading="lazy" width="500" height="600" />
+                  <span class="ejemplar-card__badge ejemplar-card__badge--female">
+                    <i class="fa-solid fa-mars" aria-hidden="true"></i> Hembra
+                  </span>
+                </div>
+                <div class="ejemplar-card__body">
+                  <h3 class="ejemplar-card__name">Amaya</h3>
+                  <p class="ejemplar-card__subtitle">Campeón de belleza · Línea importada</p>
+                  <dl class="ejemplar-card__specs">
+                    <div class="spec-row"><dt><i class="fa-solid fa-dna" aria-hidden="true"></i> Pedigrí</dt><dd>FCI registrado · 3 generaciones</dd></div>
+                    <div class="spec-row"><dt><i class="fa-solid fa-weight-scale" aria-hidden="true"></i> Peso</dt><dd>5,2 kg · Talla estándar</dd></div>
+                    <div class="spec-row"><dt><i class="fa-solid fa-face-smile" aria-hidden="true"></i> Temperamento</dt><dd>Dócil, juguetón, sociable</dd></div>
+                    <div class="spec-row"><dt><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Salud</dt><dd>Libre de enfermedades hereditarias</dd></div>
+                  </dl>
+                </div>
+              </article>
+              
+              <!-- ── Ejemplar 7 ── -->
+              <article class="ejemplar-card" data-name="Dream a little dream" data-gallery='["assets/img/dream-1.jpeg","assets/img/dream-2.jpeg"]'>
+                <div class="ejemplar-card__img-wrap gallery-trigger" title="Ver fotos">
+                  <img src="assets/img/dream-1.jpeg" alt="Ejemplar hembra Shih Tzu Max Royal" loading="lazy" width="500" height="600" />
+                  <span class="ejemplar-card__badge ejemplar-card__badge--female">
+                    <i class="fa-solid fa-mars" aria-hidden="true"></i> Hembra
+                  </span>
+                </div>
+                <div class="ejemplar-card__body">
+                  <h3 class="ejemplar-card__name">Dream a little dream</h3>
                   <p class="ejemplar-card__subtitle">Campeón de belleza · Línea importada</p>
                   <dl class="ejemplar-card__specs">
                     <div class="spec-row"><dt><i class="fa-solid fa-dna" aria-hidden="true"></i> Pedigrí</dt><dd>FCI registrado · 3 generaciones</dd></div>
@@ -363,15 +403,15 @@
             <div class="ejm-carousel__track">
 
               <!-- ── Cachorro 1: Disponible ── -->
-              <article class="puppy-card puppy-card--available" data-name="Luna ✨" data-gallery='["assets/img/cachorro-1.jpg"]'>
+              <article class="puppy-card puppy-card--available" data-name="Luna ✨" data-gallery='["assets/img/camadas/hembra1-1.jpeg","assets/img/camadas/hembra1-2.jpeg"]'>
                 <div class="puppy-card__img-wrap gallery-trigger" title="Ver fotos">
-                  <img src="assets/img/cachorro-1.jpg" alt="Cachorro Shih Tzu Luna — Disponible" loading="lazy" width="500" height="500" />
+                  <img src="assets/img/camadas/hembra1-1.jpeg" alt="Cachorra Shih Tzu — Disponible" loading="lazy" width="500" height="500" />
                   <span class="puppy-card__status puppy-card__status--available">
                     <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
                   </span>
                 </div>
                 <div class="puppy-card__body">
-                  <h3 class="puppy-card__name">Luna ✨</h3>
+                  <h3 class="puppy-card__name">Hembra 1 ✨</h3>
                   <div class="puppy-card__meta">
                     <span><i class="fa-solid fa-venus" aria-hidden="true"></i> Hembra</span>
                     <span><i class="fa-solid fa-calendar" aria-hidden="true"></i> 8 semanas</span>
@@ -379,7 +419,7 @@
                   </div>
                   <p class="puppy-card__desc">Personalidad dulce y curiosa. Adora los mimos y se lleva de maravilla con niños.</p>
                   <a href="#contacto" class="btn btn--gold btn--sm">
-                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Luna
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar por Hembra 1
                   </a>
                 </div>
               </article>
@@ -658,7 +698,7 @@
                   id="telefono"
                   name="telefono"
                   class="form-input"
-                  placeholder="+56 9 XXXX XXXX"
+                  placeholder="+56 9 8889 7770"
                   autocomplete="tel"
                 />
               </div>
@@ -706,7 +746,7 @@
               <h3 class="contact-info-card__title">Contáctanos directamente</h3>
 
               <a
-                href="https://wa.me/56900000000?text=Hola!%20Vi%20su%20criadero%20y%20me%20interesa%20un%20Shih%20Tzu%20%F0%9F%90%BE"
+                href="https://wa.me/56988897770?text=Hola!%20Vi%20su%20criadero%20y%20me%20interesa%20un%20Shih%20Tzu%20%F0%9F%90%BE"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="contact-channel contact-channel--whatsapp"
@@ -718,13 +758,13 @@
                 <span class="contact-channel__info">
                   <strong>WhatsApp</strong>
                   <!-- Reemplaza el número real aquí y en el href de arriba -->
-                  <span>+56 9 XXXX XXXX</span>
+                  <span>+56 9 8889 7770</span>
                 </span>
                 <span class="contact-channel__arrow" aria-hidden="true">→</span>
               </a>
 
               <a
-                href="https://www.instagram.com/tu_usuario_real"
+                href="https://www.instagram.com/isabellaroyalkennel/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="contact-channel contact-channel--instagram"
@@ -736,7 +776,7 @@
                 </span>
                 <span class="contact-channel__info">
                   <strong>Instagram</strong>
-                  <span>@isabellaroyal_shihtzu</span>
+                  <span>@isabellaroyalkennel</span>
                 </span>
                 <span class="contact-channel__arrow" aria-hidden="true">→</span>
               </a>
@@ -763,7 +803,7 @@
                 <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                 Ubicación y entregas
               </h3>
-              <p>Estamos ubicados en <strong>[Tu ciudad, País]</strong>.</p>
+              <p>Estamos ubicados en <strong>Pudahuel, Santiago, Chile</strong>.</p>
               <p>Realizamos entregas personales en la ciudad y coordinamos envíos seguros a todo el país en cabina de avión con personal de confianza.</p>
               <div class="location-badge-wrap">
                 <span class="location-badge">
@@ -826,10 +866,10 @@
           </a>
           <p class="footer__tagline">Crianza ética y responsable.<br>Cada cachorro, una historia de amor.</p>
           <div class="footer__social">
-            <a href="https://wa.me/56900000000" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--wa" aria-label="WhatsApp">
+            <a href="https://wa.me/56988897770" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--wa" aria-label="WhatsApp">
               <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             </a>
-            <a href="https://www.instagram.com/tu_usuario_real" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--ig" aria-label="Instagram">
+            <a href="https://www.instagram.com/isabellaroyalkennel/" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--ig" aria-label="Instagram">
               <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             </a>
             <a href="mailto:contacto@isabellaroyal.cl" class="social-icon social-icon--email" aria-label="Email">
@@ -873,7 +913,7 @@
 
   <!-- Botón flotante WhatsApp -->
   <a
-    href="https://wa.me/56900000000?text=Hola!%20Quiero%20consultar%20por%20un%20Shih%20Tzu%20%F0%9F%90%BE"
+    href="https://wa.me/56988897770?text=Hola!%20Quiero%20consultar%20por%20un%20Shih%20Tzu%20%F0%9F%90%BE"
     target="_blank"
     rel="noopener noreferrer"
     class="whatsapp-fab"
