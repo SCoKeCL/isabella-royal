@@ -162,24 +162,43 @@
         btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i> Enviando…';
       }
 
-      /* Simula envío. Reemplaza este bloque con tu integración real
-         (Formspree, EmailJS, fetch a tu endpoint, etc.) */
-      setTimeout(function () {
-        form.style.display = "none";
+      var data = new FormData(form);
 
-        var success = form.parentElement.querySelector(".form-success");
-        if (!success) {
-          success = document.createElement("div");
-          success.className = "form-success";
-          success.innerHTML = [
-            '<div class="form-success__icon"><i class="fa-solid fa-circle-check"></i></div>',
-            '<h3 class="form-success__title">¡Mensaje enviado!</h3>',
-            '<p class="form-success__text">Te responderemos a la brevedad por email o WhatsApp. ¡Gracias por tu interés!</p>'
-          ].join("");
-          form.parentElement.appendChild(success);
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      })
+      .then(function(response) {
+        if (response.ok) {
+          form.style.display = "none";
+          var success = form.parentElement.querySelector(".form-success");
+          if (!success) {
+            success = document.createElement("div");
+            success.className = "form-success";
+            success.innerHTML = [
+              '<div class="form-success__icon"><i class="fa-solid fa-circle-check"></i></div>',
+              '<h3 class="form-success__title">¡Mensaje enviado!</h3>',
+              '<p class="form-success__text">Te responderemos a la brevedad por email o WhatsApp. ¡Gracias por tu interés!</p>'
+            ].join("");
+            form.parentElement.appendChild(success);
+          }
+          success.classList.add("is-visible");
+        } else {
+          if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar mensaje';
+          }
+          alert("Hubo un error al enviar el mensaje. Por favor intenta de nuevo.");
         }
-        success.classList.add("is-visible");
-      }, 1200);
+      })
+      .catch(function() {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar mensaje';
+        }
+        alert("Error de conexión. Por favor intenta de nuevo.");
+      });
     });
   }
 
