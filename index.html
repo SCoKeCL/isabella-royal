@@ -49,6 +49,8 @@
           <li><a class="navbar__link" href="#nosotros">Quiénes Somos</a></li>
           <li><a class="navbar__link" href="#ejemplares">Ejemplares</a></li>
           <li><a class="navbar__link" href="#cachorros">Cachorros</a></li>
+          <li><a class="navbar__link" href="#testimonios">Testimonios</a></li>
+          <li><a class="navbar__link" href="#galeria">Galería</a></li>
           <li><a class="navbar__link" href="#cuidados">Cuidados</a></li>
           <li><a class="navbar__link navbar__link--cta" href="#contacto">Contacto</a></li>
         </ul>
@@ -535,11 +537,11 @@
               </article>
               
               <!-- ── Cachorro 7: Disponible ── -->
-              <article class="puppy-card puppy-card--available" data-name="Hembra 4 ✨" data-gallery='["assets/img/camadas/hembra4-1.jpeg","assets/img/camadas/hembra4-2.jpeg"]'>
+              <article class="puppy-card puppy-card--reserved" data-name="Hembra 4 ✨" data-gallery='["assets/img/camadas/hembra4-1.jpeg","assets/img/camadas/hembra4-2.jpeg"]'>
                 <div class="puppy-card__img-wrap gallery-trigger" title="Ver fotos">
                   <img src="assets/img/camadas/hembra4-1.jpeg" alt="Cachorra Shih Tzu — Disponible" loading="lazy" width="500" height="500" />
-                  <span class="puppy-card__status puppy-card__status--available">
-                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponible
+                  <span class="puppy-card__status puppy-card__status--reserved">
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Reservada
                   </span>
                 </div>
                 <div class="puppy-card__body">
@@ -627,7 +629,345 @@
     </section>
 
     <!-- ============================================================
-         SECCIÓN 5: CUIDADOS DEL SHIH TZU
+         SECCIÓN 5: TESTIMONIOS
+    ============================================================ -->
+    <section class="testimonios" id="testimonios" aria-label="Testimonios de familias">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">Lo que dicen nuestras familias</span>
+          <h2 class="section-title">Historias de amor<br><em>que nos llenan el corazón</em></h2>
+          <p class="section-desc">Más de 115 familias ya tienen un compañero Isabella Royal. Aquí comparten su experiencia.</p>
+        </div>
+
+        <!-- CARRUSEL DE TESTIMONIOS -->
+        <div class="testimonios-carousel" id="testimoniosCarousel">
+
+          <!-- Flecha izquierda -->
+          <button class="ejm-carousel__btn ejm-carousel__btn--prev" aria-label="Testimonio anterior">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+
+          <!-- Track deslizable -->
+          <div class="ejm-carousel__viewport">
+            <div class="ejm-carousel__track">
+
+              <!-- ── Testimonio 1 ── -->
+              <!-- Para agregar un testimonio: copia este bloque <article> y modifica los datos -->
+              <article class="testimonio-card">
+                <div class="testimonio-card__stars" aria-label="5 estrellas">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote class="testimonio-card__quote">
+                  "Llegó a casa y en dos días era como si siempre hubiera vivido con nosotros. Es increíblemente cariñoso y sano. ¡Isabella Royal cumplió todo lo que prometió y más!"
+                </blockquote>
+                <div class="testimonio-card__author">
+                  <div class="testimonio-card__avatar" aria-hidden="true">M</div>
+                  <div class="testimonio-card__info">
+                    <strong class="testimonio-card__name">María José R.</strong>
+                    <span class="testimonio-card__location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Santiago, RM</span>
+                    <span class="testimonio-card__pet">Dueña de <em>Copito</em> 🐾</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── Testimonio 2 ── -->
+              <article class="testimonio-card">
+                <div class="testimonio-card__stars" aria-label="5 estrellas">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote class="testimonio-card__quote">
+                  "El proceso fue transparente desde el principio. Nos enviaron fotos y videos durante semanas antes de la entrega. Cuando llegó nuestra Valentina ya era parte de la familia. 100% recomendados."
+                </blockquote>
+                <div class="testimonio-card__author">
+                  <div class="testimonio-card__avatar" aria-hidden="true">C</div>
+                  <div class="testimonio-card__info">
+                    <strong class="testimonio-card__name">Carlos y Ana P.</strong>
+                    <span class="testimonio-card__location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Viña del Mar, V Región</span>
+                    <span class="testimonio-card__pet">Dueños de <em>Valentina</em> 🐾</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── Testimonio 3 ── -->
+              <article class="testimonio-card">
+                <div class="testimonio-card__stars" aria-label="5 estrellas">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote class="testimonio-card__quote">
+                  "Llevamos 3 años con nuestro Milo y sigue siendo el mismo perrito alegre y sano que nos entregaron. Siempre han estado disponibles para cualquier consulta. Son un criadero de verdad."
+                </blockquote>
+                <div class="testimonio-card__author">
+                  <div class="testimonio-card__avatar" aria-hidden="true">F</div>
+                  <div class="testimonio-card__info">
+                    <strong class="testimonio-card__name">Fernanda L.</strong>
+                    <span class="testimonio-card__location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Concepción, VIII Región</span>
+                    <span class="testimonio-card__pet">Dueña de <em>Milo</em> 🐾</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── Testimonio 4 ── -->
+              <article class="testimonio-card">
+                <div class="testimonio-card__stars" aria-label="5 estrellas">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote class="testimonio-card__quote">
+                  "Nuestra Lola viajó desde Santiago en cabina y llegó perfecta. El contrato, las vacunas, todo en orden. Se nota que aman lo que hacen. Gracias Isabella Royal por traer tanta felicidad a nuestra casa."
+                </blockquote>
+                <div class="testimonio-card__author">
+                  <div class="testimonio-card__avatar" aria-hidden="true">R</div>
+                  <div class="testimonio-card__info">
+                    <strong class="testimonio-card__name">Roberto M.</strong>
+                    <span class="testimonio-card__location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Puerto Montt, X Región</span>
+                    <span class="testimonio-card__pet">Dueño de <em>Lola</em> 🐾</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── Testimonio 5 ── -->
+              <article class="testimonio-card">
+                <div class="testimonio-card__stars" aria-label="5 estrellas">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote class="testimonio-card__quote">
+                  "Teníamos dudas de comprar un perrito online pero Isabella Royal nos dio toda la confianza. Nos mostraron el criadero por videollamada, vimos a los papás y nos resolvieron todas las dudas. ¡Repetiremos sin dudarlo!"
+                </blockquote>
+                <div class="testimonio-card__author">
+                  <div class="testimonio-card__avatar" aria-hidden="true">P</div>
+                  <div class="testimonio-card__info">
+                    <strong class="testimonio-card__name">Pilar y Joaquín V.</strong>
+                    <span class="testimonio-card__location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Antofagasta, II Región</span>
+                    <span class="testimonio-card__pet">Dueños de <em>Toffee</em> 🐾</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ── Para agregar más testimonios, copia un bloque <article> aquí ── -->
+
+            </div><!-- /.ejm-carousel__track -->
+          </div><!-- /.ejm-carousel__viewport -->
+
+          <!-- Flecha derecha -->
+          <button class="ejm-carousel__btn ejm-carousel__btn--next" aria-label="Testimonio siguiente">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+
+          <!-- Dots de navegación -->
+          <div class="ejm-carousel__dots" aria-label="Navegación del carrusel"></div>
+
+        </div><!-- /.testimonios-carousel -->
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 6: GALERÍA DE ENTREGAS
+    ============================================================ -->
+    <section class="galeria" id="galeria" aria-label="Galería de entregas">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-tag">El momento más especial</span>
+          <h2 class="section-title">Fotos de <em>Entrega</em></h2>
+          <p class="section-desc">El día de entrega es uno de los momentos más emocionantes. Aquí puedes apreciar los colores, el pelaje y las características de nuestra raza en todo su esplendor.</p>
+        </div>
+
+        <!-- GALERÍA GRANDE — haz clic en cada foto para ampliarla -->
+        <!-- Para agregar fotos: copia un bloque <figure> y cambia src, alt y data-src -->
+        <div class="galeria__grid" id="galeriaGrid">
+
+          <!-- Foto 1 -->
+          <figure class="galeria__item galeria__item--tall">
+            <img
+              src="assets/img/camadas/hembra1-1.jpeg"
+              alt="Cachorra Shih Tzu en el día de entrega"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/hembra1-1.jpeg"
+              data-caption="Hembra 1 — Día de entrega"
+            />
+            <figcaption class="galeria__caption">Hembra 1 — Tricolor</figcaption>
+          </figure>
+
+          <!-- Foto 2 -->
+          <figure class="galeria__item">
+            <img
+              src="assets/img/camadas/hembra1-2.jpeg"
+              alt="Cachorra Shih Tzu detalle de pelaje"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/hembra1-2.jpeg"
+              data-caption="Hembra 1 — Detalle de pelaje"
+            />
+            <figcaption class="galeria__caption">Hembra 1 — Pelaje sedoso</figcaption>
+          </figure>
+
+          <!-- Foto 3 -->
+          <figure class="galeria__item">
+            <img
+              src="assets/img/camadas/macho1-1.jpeg"
+              alt="Cachorro Shih Tzu macho dorado y blanco"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/macho1-1.jpeg"
+              data-caption="Macho 1 — Dorado y blanco"
+            />
+            <figcaption class="galeria__caption">Macho 1 — Dorado y blanco</figcaption>
+          </figure>
+
+          <!-- Foto 4 -->
+          <figure class="galeria__item galeria__item--wide">
+            <img
+              src="assets/img/camadas/macho1-2.jpeg"
+              alt="Cachorro Shih Tzu detalle cara"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/macho1-2.jpeg"
+              data-caption="Macho 1 — Cara y expresión"
+            />
+            <figcaption class="galeria__caption">Macho 1 — Expresión característica</figcaption>
+          </figure>
+
+          <!-- Foto 5 -->
+          <figure class="galeria__item">
+            <img
+              src="assets/img/camadas/hembra2-1.jpeg"
+              alt="Cachorra Shih Tzu hembra 2"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/hembra2-1.jpeg"
+              data-caption="Hembra 2 — Tricolor"
+            />
+            <figcaption class="galeria__caption">Hembra 2 — Tricolor</figcaption>
+          </figure>
+
+          <!-- Foto 6 -->
+          <figure class="galeria__item galeria__item--tall">
+            <img
+              src="assets/img/camadas/hembra2-2.jpeg"
+              alt="Cachorra Shih Tzu hembra 2 pelaje"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/hembra2-2.jpeg"
+              data-caption="Hembra 2 — Pelaje completo"
+            />
+            <figcaption class="galeria__caption">Hembra 2 — Pelaje completo</figcaption>
+          </figure>
+
+          <!-- Foto 7 -->
+          <figure class="galeria__item">
+            <img
+              src="assets/img/camadas/macho2-1.jpeg"
+              alt="Cachorro Shih Tzu macho 2"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/macho2-1.jpeg"
+              data-caption="Macho 2 — Dorado y blanco"
+            />
+            <figcaption class="galeria__caption">Macho 2 — Dorado y blanco</figcaption>
+          </figure>
+
+          <!-- Foto 8 -->
+          <figure class="galeria__item">
+            <img
+              src="assets/img/camadas/macho2-2.jpeg"
+              alt="Cachorro Shih Tzu macho 2 detalle"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/macho2-2.jpeg"
+              data-caption="Macho 2 — Detalle"
+            />
+            <figcaption class="galeria__caption">Macho 2 — Detalle</figcaption>
+          </figure>
+
+          <!-- Foto 9 -->
+          <figure class="galeria__item galeria__item--wide">
+            <img
+              src="assets/img/camadas/hembra3-1.jpeg"
+              alt="Cachorra Shih Tzu hembra 3"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/hembra3-1.jpeg"
+              data-caption="Hembra 3 — Tricolor"
+            />
+            <figcaption class="galeria__caption">Hembra 3 — Tricolor</figcaption>
+          </figure>
+
+          <!-- Foto 10 -->
+          <figure class="galeria__item">
+            <img
+              src="assets/img/camadas/hembra3-2.jpeg"
+              alt="Cachorra Shih Tzu hembra 3 pelaje"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/hembra3-2.jpeg"
+              data-caption="Hembra 3 — Pelaje sedoso"
+            />
+            <figcaption class="galeria__caption">Hembra 3 — Pelaje sedoso</figcaption>
+          </figure>
+
+          <!-- Foto 11 -->
+          <figure class="galeria__item">
+            <img
+              src="assets/img/camadas/macho3-1.jpeg"
+              alt="Cachorro Shih Tzu macho 3"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/macho3-1.jpeg"
+              data-caption="Macho 3 — Dorado y blanco"
+            />
+            <figcaption class="galeria__caption">Macho 3 — Dorado y blanco</figcaption>
+          </figure>
+
+          <!-- Foto 12 -->
+          <figure class="galeria__item galeria__item--tall">
+            <img
+              src="assets/img/camadas/macho3-2.jpeg"
+              alt="Cachorro Shih Tzu macho 3 detalle"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/macho3-2.jpeg"
+              data-caption="Macho 3 — Detalle"
+            />
+            <figcaption class="galeria__caption">Macho 3 — Detalle</figcaption>
+          </figure>
+
+          <!-- Foto 13 -->
+          <figure class="galeria__item">
+            <img
+              src="assets/img/camadas/hembra4-1.jpeg"
+              alt="Cachorra Shih Tzu hembra 4"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/hembra4-1.jpeg"
+              data-caption="Hembra 4 — Tricolor"
+            />
+            <figcaption class="galeria__caption">Hembra 4 — Tricolor</figcaption>
+          </figure>
+
+          <!-- Foto 14 -->
+          <figure class="galeria__item">
+            <img
+              src="assets/img/camadas/hembra4-2.jpeg"
+              alt="Cachorra Shih Tzu hembra 4 pelaje"
+              loading="lazy"
+              class="galeria__img galeria__trigger"
+              data-src="assets/img/camadas/hembra4-2.jpeg"
+              data-caption="Hembra 4 — Pelaje"
+            />
+            <figcaption class="galeria__caption">Hembra 4 — Pelaje</figcaption>
+          </figure>
+
+          <!-- ── Para agregar más fotos, copia un bloque <figure> aquí ── -->
+
+        </div><!-- /.galeria__grid -->
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 7: CUIDADOS DEL SHIH TZU
     ============================================================ -->
     <section class="cuidados" id="cuidados" aria-label="Cuidados del Shih Tzu">
       <div class="container">
@@ -998,6 +1338,8 @@
             <li><a href="#nosotros">Quiénes Somos</a></li>
             <li><a href="#ejemplares">Ejemplares</a></li>
             <li><a href="#cachorros">Cachorros</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#galeria">Galería</a></li>
             <li><a href="#cuidados">Cuidados</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>

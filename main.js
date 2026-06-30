@@ -581,6 +581,162 @@
   }
 
   /* ══════════════════════════════
+     CARRUSEL TESTIMONIOS
+  ══════════════════════════════ */
+  function initTestimoniosCarousel() {
+    var wrap = document.getElementById("testimoniosCarousel");
+    if (!wrap) return;
+    var track   = wrap.querySelector(".ejm-carousel__track");
+    var btnPrev = wrap.querySelector(".ejm-carousel__btn--prev");
+    var btnNext = wrap.querySelector(".ejm-carousel__btn--next");
+    var dotsWrap = wrap.querySelector(".ejm-carousel__dots");
+    if (!track || !btnPrev || !btnNext) return;
+
+    var current = 0;
+
+    function getVisible() {
+      var w = wrap.offsetWidth;
+      if (w < 560) return 1;
+      if (w < 900) return 2;
+      return 3;
+    }
+
+    function totalSlides() {
+      var cards = track.querySelectorAll(".testimonio-card");
+      return Math.max(0, cards.length - getVisible() + 1);
+    }
+
+    function buildDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = "";
+      var total = totalSlides();
+      for (var i = 0; i < total; i++) {
+        var dot = document.createElement("button");
+        dot.className = "ejm-carousel__dot" + (i === current ? " is-active" : "");
+        dot.setAttribute("aria-label", "Ir al testimonio " + (i + 1));
+        (function(idx) {
+          dot.addEventListener("click", function() { goTo(idx); });
+        })(i);
+        dotsWrap.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      var dots = dotsWrap ? dotsWrap.querySelectorAll(".ejm-carousel__dot") : [];
+      dots.forEach(function(d, i) { d.classList.toggle("is-active", i === current); });
+    }
+
+    function goTo(idx) {
+      var total = totalSlides();
+      current = Math.max(0, Math.min(idx, total - 1));
+      var visible   = getVisible();
+      var gap       = 32;
+      var cardWidth = (track.parentElement.offsetWidth - gap * (visible - 1)) / visible;
+      var offset    = current * (cardWidth + gap);
+      track.style.transform = "translateX(-" + offset + "px)";
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current >= total - 1;
+      updateDots();
+    }
+
+    var touchStartX = 0;
+    track.addEventListener("touchstart", function(e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener("touchend", function(e) {
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) diff > 0 ? goTo(current + 1) : goTo(current - 1);
+    }, { passive: true });
+
+    btnPrev.addEventListener("click", function() { goTo(current - 1); });
+    btnNext.addEventListener("click", function() { goTo(current + 1); });
+
+    window.addEventListener("resize", function() {
+      buildDots();
+      if (current >= totalSlides()) current = totalSlides() - 1;
+      goTo(current);
+    });
+
+    buildDots();
+    goTo(0);
+  }
+
+  /* ══════════════════════════════
+     GALERÍA DE ENTREGAS (lightbox)
+  ══════════════════════════════ */
+  function initGaleria() {
+    var triggers = document.querySelectorAll(".galeria__trigger");
+    if (!triggers.length) return;
+
+    var lb       = document.getElementById("lightbox");
+    var lbImg    = document.getElementById("lightboxImg");
+    var lbName   = document.getElementById("lightboxName");
+    var lbCounter = document.getElementById("lightboxCounter");
+    var lbClose  = document.getElementById("lightboxClose");
+    var lbPrev   = document.getElementById("lightboxPrev");
+    var lbNext   = document.getElementById("lightboxNext");
+    if (!lb || !lbImg) return;
+
+    var images = [];
+    var current = 0;
+
+    triggers.forEach(function(el, idx) {
+      images.push({
+        src: el.dataset.src || el.src,
+        caption: el.dataset.caption || ""
+      });
+      el.addEventListener("click", function() { openAt(idx); });
+      el.parentElement.style.cursor = "pointer";
+    });
+
+    function openAt(idx) {
+      current = idx;
+      show();
+    }
+
+    function show() {
+      var item = images[current];
+      lbImg.src = item.src;
+      lbImg.alt = item.caption;
+      if (lbName) lbName.textContent = item.caption;
+      if (lbCounter) lbCounter.textContent = (current + 1) + " / " + images.length;
+      lb.hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+
+    function close() {
+      lb.hidden = true;
+      lbImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    function prev() { current = (current - 1 + images.length) % images.length; show(); }
+    function next() { current = (current + 1) % images.length; show(); }
+
+    if (lbClose) lbClose.addEventListener("click", close);
+    if (lbPrev)  lbPrev.addEventListener("click", prev);
+    if (lbNext)  lbNext.addEventListener("click", next);
+
+    lb.addEventListener("click", function(e) {
+      if (e.target === lb) close();
+    });
+
+    document.addEventListener("keydown", function(e) {
+      if (lb.hidden) return;
+      if (e.key === "Escape")      close();
+      if (e.key === "ArrowLeft")   prev();
+      if (e.key === "ArrowRight")  next();
+    });
+
+    var touchX = 0;
+    lb.addEventListener("touchstart", function(e) { touchX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", function(e) {
+      var diff = touchX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) diff > 0 ? next() : prev();
+    }, { passive: true });
+  }
+
+  /* ══════════════════════════════
      BOOT — arranca todo
   ══════════════════════════════ */
   function boot() {
@@ -594,6 +750,8 @@
     safe(initLightbox,            "initLightbox");
     safe(initEjemplaresCarousel,  "initEjemplaresCarousel");
     safe(initCachorrosCarousel,   "initCachorrosCarousel");
+    safe(initTestimoniosCarousel, "initTestimoniosCarousel");
+    safe(initGaleria,             "initGaleria");
   }
 
   if (document.readyState === "loading") {
